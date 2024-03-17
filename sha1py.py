@@ -17,9 +17,7 @@ def sha1(message):
 
     # Pre-processing
     original_byte_len = len(message)
-    # print("Original byte length:", original_byte_len)
     original_bit_len = original_byte_len * 8
-    # print("Original bit length:", original_bit_len)
     
     # Append '10000000' to the message
     message += b'\x80'
@@ -27,20 +25,13 @@ def sha1(message):
     # Append '0' until the message length in bits is 448 (mod 512)
     while len(message) % 64 != 56:
         message += b'\x00'
-    # print(message)
-    # print("Length part:", struct.pack('>Q', original_bit_len))
     message += struct.pack('>Q', original_bit_len)
-    # print("message:", message) 
-    # print(len(message))
 
 
     # Process in 512-bit chunks
     for i in range(0, len(message), 64):
-        # print("i:", i)
         chunk = message[i:i+64]
         w = [0] * 80
-        # print("Chunk:", chunk)
-        # print("w:", w)
 
         # Break chunk into sixteen 32-bit big-endian words
         for j in range(16):
@@ -91,26 +82,6 @@ def sha1(message):
     return '%040x' % hash_result
 
 
-    
-# def main(): 
-#     if len(sys.argv) != 2:
-#         print("Usage: {} <message or file>".format(sys.argv[0]))
-#         sys.exit(1)
-
-#     input_data = sys.argv[1]
-#     name = ""
-
-#     # Check if input is a file path
-#     if os.path.isfile(input_data):
-#         with open(input_data, 'rb') as file:
-#             message = file.read()
-#     else:
-#         message = input_data.encode()
-
-#     hashed_message = sha1(message)
-    
-#     print("SHA-1 hash:", hashed_message)
-
 def main(): 
     if len(sys.argv) != 2:
         print("Usage: {} <message or file>".format(sys.argv[0]))
@@ -136,9 +107,3 @@ if __name__ == "__main__":
     main()
 
 
-# Testing
-# message = input()
-# print(message)
-# print(message.encode())
-# message = message.encode()
-# print("SHA-1 hash:", sha1(message))
