@@ -8,22 +8,42 @@ To use the script, clone the repo, then run the sha1py.py from the command line 
 
 ### Command Line Usage
 
-```./sha1py.py <message or file>```
+```
+./sha1py.py <message or file>
+```
 Replace `<message or file>` with the message you want to hash or the path to the file you want to hash.
 
 ## Examples
 
 Compute the SHA-1 hash of a message:
 
-Command: ```./sha1py.py hello```
-Output: ```aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d   -   "hello"```
+Command: 
+```
+./sha1py.py hello
+```
+Output: 
+```
+aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d   -   "hello"
+```
 
 
-Command: ```./sha1py.py "Hello World!"```
-Output: ```2ef7bde608ce5404e97d5f042f95f89f1c232871   -   "Hello World!"```
+Command: 
+```
+./sha1py.py "Hello World!"
+```
+Output: 
+```
+2ef7bde608ce5404e97d5f042f95f89f1c232871   -   "Hello World!"
+```
 
-Command: ```./sha1py.py a.py```
-Output: ```a579f2bb1c6a948e8e3e26391b0c92c8797ffa01   -   a.py```
+Command: 
+```
+./sha1py.py a.py
+```
+Output: 
+```
+a579f2bb1c6a948e8e3e26391b0c92c8797ffa01   -   a.py
+```
 
 ## Requirements
 
