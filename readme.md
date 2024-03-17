@@ -17,6 +17,7 @@ Replace `<message or file>` with the message you want to hash or the path to the
 
 Compute the SHA-1 hash of a message:
 
+### Example 1:
 Command: 
 ```
 ./sha1py.py hello
@@ -27,6 +28,7 @@ aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d   -   "hello"
 ```
 
 
+### Example 2:
 Command: 
 ```
 ./sha1py.py "Hello World!"
@@ -36,6 +38,7 @@ Output:
 2ef7bde608ce5404e97d5f042f95f89f1c232871   -   "Hello World!"
 ```
 
+### Example 3:
 Command: 
 ```
 ./sha1py.py a.py
