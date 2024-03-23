@@ -12,6 +12,12 @@ This Python script implements the SHA-1 (Secure Hash Algorithm 1) hashing algori
 
 To use the script, clone the repo, then run the sha1py.py from the command line with Python 3 and provide either a message or a file as input. The script will compute the SHA-1 hash of the input and print the result.
 
+### Note
+For Linux: add execute permission for the script by running:
+```
+chmod +x ./sha1py.py
+```
+
 ### Command Line Usage
 
 ```
